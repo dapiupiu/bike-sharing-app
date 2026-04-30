@@ -1,6 +1,6 @@
 # 🚲 Bike Sharing Analytics Dashboard
 
-Proyek ini merupakan tugas akhir dari program belajar **Data Analytics** yang berfokus pada eksplorasi, analisis, dan visualisasi data penyewaan sepeda. Proyek mencakup seluruh tahapan analisis data mulai dari *Data Wrangling*, *Exploratory Data Analysis* (EDA), hingga pembuatan dashboard interaktif menggunakan **Streamlit**.
+Proyek ini merupakan submission akhir dari kelas **"Belajar Fundamental Analisis Data"** pada program Coding Camp 2026 by Dicoding yang berfokus pada eksplorasi, analisis, dan visualisasi data penyewaan sepeda (Bike Sharing). Proyek mencakup seluruh tahapan analisis data mulai dari *Data Wrangling*, *Exploratory Data Analysis* (EDA), hingga pembuatan dashboard interaktif menggunakan **Streamlit**.
 
 ---
 
@@ -16,12 +16,9 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 ## ❓ Pertanyaan Bisnis
 
 ### 🌦️ Analisis Cuaca
-*   Bagaimana kondisi cuaca memengaruhi rata-rata jumlah penyewaan sepeda?
-
+*   Bagaimana pengaruh kondisi cuaca (weathershit) terhadap rata-rata jumlah penyewaan sepeda per jam?
 ### ⏰ Analisis Waktu
-*   Di jam berapa terjadi puncak penyewaan sepeda pada:
-    *   Hari kerja?
-    *   Hari libur / akhir pekan?
+*   Bagaimana pengaruh kondisi cuaca (weathershit) terhadap rata-rata jumlah penyewaan sepeda per jam?
 
 ---
 
@@ -39,7 +36,7 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 ```text
 .
 ├── dashboard/
-│   ├── dashboard.py       # Aplikasi utama Streamlit
+│   ├── dashboard.py       # Dashboard utama Streamlit
 │   ├── all_data.csv       # Dataset hasil cleaning
 │   └── logo.png           # Logo dashboard
 │
@@ -47,7 +44,7 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 │   ├── day.csv            # Data mentah harian
 │   └── hour.csv           # Data mentah per jam
 │
-├── notebook.ipynb         # Proses EDA & analisis data
+├── notebook.ipynb         # Proses Wranling, EDA & insight
 ├── requirements.txt       # Library yang dibutuhkan
 ├── url.txt                # Link dashboard publik
 └── README.md              # Dokumentasi proyek
