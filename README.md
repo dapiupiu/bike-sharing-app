@@ -51,3 +51,13 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 ├── requirements.txt       # Library yang dibutuhkan
 ├── url.txt                # Link dashboard publik
 └── README.md              # Dokumentasi proyek
+```
+
+### Cara Cepat Jalankan (Windows)
+```bash
+git clone [https://github.com/username/proyek-analisis-data.git](https://github.com/username/proyek-analisis-data.git)
+cd proyek-analisis-data
+python -m venv venv
+venv\Scripts\activate
+pip install -r requirements.txt
+streamlit run dashboard/dashboard.py
