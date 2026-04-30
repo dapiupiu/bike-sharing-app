@@ -1,6 +1,6 @@
 # 🚲 Bike Sharing Analytics Dashboard
 
-Proyek ini merupakan submission akhir dari kelas **"Belajar Fundamental Analisis Data"** pada program Coding Camp 2026 by Dicoding yang berfokus pada eksplorasi, analisis, dan visualisasi data penyewaan sepeda (Bike Sharing). Proyek mencakup seluruh tahapan analisis data mulai dari *Data Wrangling*, *Exploratory Data Analysis* (EDA), hingga pembuatan dashboard interaktif menggunakan **Streamlit**.
+Proyek ini merupakan salah satu proyek analisis data yang berfokus pada eksplorasi, analisis, dan visualisasi data penyewaan sepeda (Bike Sharing). Proyek mencakup seluruh tahapan analisis data mulai dari *Data Wrangling*, *Exploratory Data Analysis* (EDA), hingga pembuatan dashboard interaktif menggunakan **Streamlit**.
 
 ---
 
@@ -52,8 +52,8 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 
 ### Cara Cepat Jalankan (Windows)
 ```bash
-git clone [https://github.com/username/proyek-analisis-data.git](https://github.com/username/proyek-analisis-data.git)
-cd proyek-analisis-data
+git clone [https://github.com/username/proyek-analisis-data.git](https://github.com/username/bike-sharing-app.git)
+cd bike-sharing-app
 python -m venv venv
 venv\Scripts\activate
 pip install -r requirements.txt
