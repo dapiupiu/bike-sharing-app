@@ -48,14 +48,22 @@ with st.sidebar:
     except Exception:
         start_date = end_date = min_date
 
-    # Filter Musim (Multiselect)
-    all_seasons = all_data_df['season'].unique()
-    selected_seasons = st.multiselect(
-        "Pilih Musim:",
-        options=all_seasons,
-        default=all_seasons
-    )
+# Contoh Filter Musim dengan opsi All
+all_seasons = all_data_df['season'].unique().tolist()
+options = ["All"] + all_seasons
 
+selected_seasons = st.multiselect(
+    "Pilih Musim:",
+    options=options,
+    default=["All"]
+)
+
+# Logika Filter
+if "All" in selected_seasons:
+    filtered_df = all_data_df
+else:
+    filtered_df = all_data_df[all_data_df['season'].isin(selected_seasons)]
+    
 # Terapkan filter pada DataFrame utama
 main_df = all_data_df[
     (all_data_df["dteday"] >= pd.to_datetime(start_date)) & 
