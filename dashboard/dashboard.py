@@ -27,7 +27,7 @@ all_data_df = load_data()
 
 # --- SIDEBAR WITH FILTERS ---
 with st.sidebar:
-    st.image("logo.png")
+    st.image("dashboard/logo.png")
     st.title("Bike Sharing Filter")
     
     # Filter Rentang Waktu
