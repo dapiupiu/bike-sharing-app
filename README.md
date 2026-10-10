@@ -1,0 +1,80 @@
+# Bike Sharing Analytics Dashboard
+
+Proyek ini merupakan salah satu proyek analisis data yang berfokus pada eksplorasi, analisis, dan visualisasi data penyewaan sepeda (Bike Sharing). Proyek mencakup seluruh tahapan analisis data mulai dari *Data Wrangling*, *Exploratory Data Analysis* (EDA), hingga pembuatan dashboard interaktif menggunakan **Streamlit**.
+
+---
+
+## Ringkasan Proyek
+
+Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan sepeda, seperti:
+*   **Pengaruh Kondisi Cuaca:** Mengetahui bagaimana elemen atmosfer memengaruhi minat penyewa.
+*   **Pola Penggunaan Berdasarkan Waktu:** Membedakan perilaku pengguna pada hari kerja vs akhir pekan.
+*   **Karakteristik & Segmentasi:** Memahami perbedaan profil antara pengguna kasual dan pengguna terdaftar.
+
+---
+
+## Pertanyaan Bisnis
+
+### Analisis Cuaca
+*   Bagaimana pengaruh kondisi cuaca (weathersit) terhadap rata-rata jumlah penyewaan sepeda per jam?
+### Analisis Waktu
+*   Bagaimana pengaruh kondisi cuaca (weathersit) terhadap rata-rata jumlah penyewaan sepeda per jam?
+
+---
+
+## Fitur Utama Dashboard
+
+*   **Metrics Summary:** Menampilkan total penyewaan, pengguna terdaftar, dan pengguna kasual secara dinamis.
+*   **Weather Performance:** Visualisasi pengaruh kondisi cuaca terhadap jumlah penyewaan.
+*   **Hourly Patterns:** Perbandingan pola penggunaan antara komuter (hari kerja) dan rekreasi (akhir pekan).
+*   **User Segmentation:** Analisis proporsi antara pengguna *Casual* dan *Registered*.
+*   **Deep Dive Analysis:** Analisis lanjutan meliputi matriks korelasi, *feature importance*, dan distribusi musiman (*boxplot*).
+
+---
+
+## Struktur Folder
+```text
+.
+├── dashboard/
+│   ├── dashboard.py       # Dashboard utama Streamlit
+│   ├── all_data.csv       # Dataset hasil cleaning
+│   └── logo.png           # Logo dashboard
+│
+├── data/
+│   ├── day.csv            # Data mentah harian
+│   └── hour.csv           # Data mentah per jam
+│
+├── notebook.ipynb         # Proses Wranling, EDA & insight
+├── requirements.txt       # Library yang dibutuhkan
+├── url.txt                # Link dashboard publik
+└── README.md              # Dokumentasi proyek
+```
+
+### Cara Cepat Menjalankan Proyek (Windows)
+```bash
+git clone https://github.com/username/bike-sharing-app.git
+cd bike-sharing-app
+python -m venv venv
+venv\Scripts\activate    # Windows
+source venv/bin/activate  # macOS / Linux
+```
+
+Instal dependensi dan jalankan dashboard:
+
+```bash
+pip install -r requirements.txt
+streamlit run dashboard/dashboard.py
+```
+
+Jalankan dashboard sesuai dengan alamat localhost.
+
+## Tip interaktif
+- Gunakan slider waktu dan dropdown kondisi cuaca di dashboard untuk melihat perubahan metrik secara real-time.
+- Buka `notebook.ipynb` untuk melihat langkah-langkah pembersihan dan visualisasi yang menghasilkan dataset `dashboard/all_data.csv`.
+
+## Untuk kontributor
+- Perbarui notebook atau tambahkan notebook baru untuk eksperimen.
+- Jika menambah dependensi, perbarui `requirements.txt`.
+- Buat PR dengan deskripsi perubahan dan contoh output.
+
+---
