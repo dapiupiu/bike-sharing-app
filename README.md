@@ -4,6 +4,20 @@ Proyek ini merupakan salah satu proyek analisis data yang berfokus pada eksplora
 
 ---
 
+**Link Dashboard: https://bike-sharing-app-kakadavidharmawan.streamlit.app/**
+
+---
+
+## Temuan Utama
+
+- **Cuaca:** rata-rata penyewaan 204,9/jam saat cerah vs 112,8/jam saat hujan/salju ringan (turun 44,9%); cuaca berkabut turun 14,5%.
+- **Pola jam:** hari kerja punya dua puncak (08:00 ≈ 478/jam dan 17:00 ≈ 526/jam), sedangkan akhir pekan/libur punya satu puncak pukul 13:00 (≈ 373/jam).
+- **Musim:** musim panas (Jun–Sep) tertinggi dengan rata-rata 236/jam, sekitar 2,1× musim dingin (111,5/jam).
+- **Pengguna:** pengguna terdaftar menyumbang 81,2% dari total penyewaan.
+- **Faktor lingkungan:** suhu berkorelasi positif sedang dengan penyewaan (r = 0,40), kelembapan negatif (r = −0,33).
+
+---
+
 ## Ringkasan Proyek
 
 Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan sepeda, seperti:
@@ -18,7 +32,7 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 ### Analisis Cuaca
 *   Bagaimana pengaruh kondisi cuaca (weathersit) terhadap rata-rata jumlah penyewaan sepeda per jam?
 ### Analisis Waktu
-*   Bagaimana pengaruh kondisi cuaca (weathersit) terhadap rata-rata jumlah penyewaan sepeda per jam?
+*   Di jam berapa terjadi puncak penyewaan sepeda pada hari kerja (workingday) dibandingkan dengan hari libur (holiday)?
 
 ---
 
@@ -28,7 +42,7 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 *   **Weather Performance:** Visualisasi pengaruh kondisi cuaca terhadap jumlah penyewaan.
 *   **Hourly Patterns:** Perbandingan pola penggunaan antara komuter (hari kerja) dan rekreasi (akhir pekan).
 *   **User Segmentation:** Analisis proporsi antara pengguna *Casual* dan *Registered*.
-*   **Deep Dive Analysis:** Analisis lanjutan meliputi matriks korelasi, *feature importance*, dan distribusi musiman (*boxplot*).
+*   **Deep Dive Analysis:** Analisis lanjutan meliputi matriks korelasi, korelasi terhadap jumlah penyewaan, dan distribusi musiman (*boxplot*).
 
 ---
 
@@ -44,7 +58,7 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 │   ├── day.csv            # Data mentah harian
 │   └── hour.csv           # Data mentah per jam
 │
-├── notebook.ipynb         # Proses Wranling, EDA & insight
+├── notebook.ipynb         # Proses Wrangling, EDA & insight
 ├── requirements.txt       # Library yang dibutuhkan
 ├── url.txt                # Link dashboard publik
 └── README.md              # Dokumentasi proyek
@@ -52,7 +66,7 @@ Tujuan utama proyek ini adalah mengungkap pola dan insight dari data penyewaan s
 
 ### Cara Cepat Menjalankan Proyek (Windows)
 ```bash
-git clone https://github.com/username/bike-sharing-app.git
+git clone https://github.com/dapiupiu/bike-sharing-app.git
 cd bike-sharing-app
 python -m venv venv
 venv\Scripts\activate    # Windows
@@ -69,7 +83,7 @@ streamlit run dashboard/dashboard.py
 Jalankan dashboard sesuai dengan alamat localhost.
 
 ## Tip interaktif
-- Gunakan slider waktu dan dropdown kondisi cuaca di dashboard untuk melihat perubahan metrik secara real-time.
+- Gunakan filter Rentang Waktu dan Pilih Musim di sidebar untuk melihat perubahan metrik secara dinamis.
 - Buka `notebook.ipynb` untuk melihat langkah-langkah pembersihan dan visualisasi yang menghasilkan dataset `dashboard/all_data.csv`.
 
 ## Untuk kontributor
