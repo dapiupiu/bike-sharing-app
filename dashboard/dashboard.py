@@ -65,11 +65,11 @@ with st.sidebar:
             value=(min_date, max_date)
         )
 
-        # Jika user memilih range tanggal
-        if isinstance(date_range, tuple) and len(date_range) == 2:
+        # Streamlit mengembalikan tuple 1 tanggal saat user baru memilih tanggal awal
+        if isinstance(date_range, (tuple, list)) and len(date_range) == 2:
             start_date, end_date = date_range
-
-        # Jika user memilih satu tanggal
+        elif isinstance(date_range, (tuple, list)) and len(date_range) == 1:
+            start_date = end_date = date_range[0]
         else:
             start_date = end_date = date_range
 
@@ -312,7 +312,7 @@ with tab2:
     # =========================
     with col_feat:
 
-        st.write("### Feature Importance (to Count)")
+        st.write("### Korelasi terhadap Jumlah Penyewaan")
 
         importance = (
             main_df[corr_cols]
@@ -336,7 +336,7 @@ with tab2:
     with st.expander("Lihat Insight Korelasi"):
 
         st.write("""
-        * Suhu memiliki korelasi positif kuat terhadap jumlah penyewaan.
+        * Suhu memiliki korelasi positif sedang terhadap jumlah penyewaan (r≈ 0,40).
         * Kelembapan tinggi cenderung menurunkan minat penyewaan.
         """)
 
